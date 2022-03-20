@@ -1,3 +1,5 @@
+const buttons = document.querySelectorAll('button');
+const results = document.querySelector('.results');
 
 function computerPlay() {
     const plays = ["rock", "paper", "scissors"];
@@ -20,19 +22,25 @@ function playRound(player, computer) {
     else return [0, "Invalid Input!"];
 }
 
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        const playerChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
+
+let playerScore = 0;
+let computerScore = 0;
+let rounds = 0;
+
+function game2() {
+    if (rounds < 5) {
+        rounds++;
+        const playerChoice = this.name;
         const result = playRound(playerChoice, computerPlay());
         if (result[0] == 1) computerScore++;
         else if (result[0] == 2) playerScore++;
         console.log(result[1]);
     }
-    if (playerScore > computerScore) console.log(`You won the game!\nScore: ${playerScore}:${computerScore}`);
-    else if (computerScore > playerScore) console.log(`You lost the game!\nScore: ${playerScore}:${computerScore}`);
-    else console.log(`The game was a tie!\nScore: ${playerScore}:${computerScore}`);
+    if (rounds == 5) {
+        if (playerScore > computerScore) results.textContent = `You won the game!\nScore: ${playerScore}:${computerScore}`;
+        else if (computerScore > playerScore) results.textContent = `You lost the game!\nScore: ${playerScore}:${computerScore}`;
+        else results.textContent = `The game was a tie!\nScore: ${playerScore}:${computerScore}`;
+    }
 }
 
-game();
+buttons.forEach(button => button.addEventListener('click', game2));
