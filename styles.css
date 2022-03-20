@@ -1,0 +1,84 @@
+/* 
+background: #141414
+text: #CDE8E8
+*/
+body {
+    background-color: #141414;
+    color: #CDE8E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+
+}
+.content {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.choices {
+    display: flex;
+    gap: 40px;
+}
+.choices button {
+    margin: 2.5px;
+    width: 150px;
+    height: 150px;
+    color: #CDE8E8;
+    background-color: #141414;
+    border-radius: 50px;
+    border: 5px solid #CDE8E8;
+    font-size: 60px;
+    box-shadow: 0 0 25px #97a5a5;
+    transition: 0.2s ease-in;
+}
+.choices button:hover {
+    margin: 0;
+    cursor: pointer;
+    width: 155px;
+    height: 155px;
+    transition: 0.1s ease-in;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+.player, .computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.results {
+    text-align: center;
+}
+
+.restartDiv {
+    display: flex;
+    justify-content: center;
+}
+.restart {
+    height: 80px;
+    width: 80px;
+    color: #CDE8E8;
+    background-color: #141414;
+    border-radius: 25px;
+    border: 5px solid #CDE8E8;
+    font-size: 50px;
+    box-shadow: 0 0 25px #97a5a5;
+    transition: 0.2s ease-in;
+}
+.restart:hover {
+    cursor: pointer;
+    width: 82px;
+    height: 82px;
+    transition: 0.1s ease-in;
+}

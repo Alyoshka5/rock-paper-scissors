@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock! Paper! Scissors!</title>
 </head>
 <body>
+    <h1>Rock, Paper, Scissors!</h1>
 
-    <button name="rock">Rock</button>
-    <button name="paper">Paper</button>
-    <button name="scissors">Scissors</button>
+    <div class="content">
+        <div class="choices">
+            <button name="rock">💎</button>
+            <button name="paper">📃​</button>
+            <button name="scissors">✂️</button>
+        </div>
+    
+        <div class="info">
+            <div class="player">
+                You
+                <div class="playerChoice"></div>
+                <div class="playerScore"></div>
+            </div>
+            <div class="computer">
+                Computer
+                <div class="computerChoice"></div>
+                <div class="computerScore"></div>
+            </div>
+        </div>
+    
+        <div class="results"></div>
+    
+        <div class="restartDiv"><button class="restart">⟲</button></div>
+    </div>
 
-    <div class="results"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
